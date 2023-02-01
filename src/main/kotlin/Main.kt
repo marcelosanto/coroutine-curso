@@ -1,12 +1,14 @@
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 fun main(args: Array<String>) {
-   GlobalScope.launch {
-       delay(1000)
-       println("World")
+   runBlocking {
+       repeat(1_000_000){
+           launch {
+               print("$it ")
+           }
+       }
    }
-    println("Hello, ")
-    Thread.sleep(2000)
 }
