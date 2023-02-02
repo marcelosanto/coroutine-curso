@@ -2,6 +2,9 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
+/**
+ * Um Job (link em inglês) é um gerenciador de uma corrotina. Cada corrotina criada com launch ou async retorna uma instância Job que identifica exclusivamente a corrotina e gerencia o ciclo de vida dela. Você também pode transmitir um Job para um CoroutineScope e gerenciar ainda mais o ciclo de vida, conforme mostrado no exemplo a seguir:
+ **/
 fun main(args: Array<String>) {
 
     runBlocking {
